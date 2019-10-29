@@ -27,8 +27,10 @@
         var options = {
           title: 'components of human body',
           slices: { 0: {offset: 0.3}},
-          pieSliceText: 'value-and-percentage',
-          PieHole: 0.4
+          PieHole: 0.4,
+          legend: {
+            position: 'labeled'
+          }
         };
         
         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
