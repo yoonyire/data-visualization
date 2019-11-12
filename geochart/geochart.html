@@ -19,7 +19,7 @@
           // read a .csv file and save the data in arrayData variable
           var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
           // send arrayData to 'draw' function
-          drawChart(arrayData)
+          drawRegionsMap(arrayData)
         });
       };
 
