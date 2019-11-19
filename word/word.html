@@ -18,14 +18,18 @@
           drawChart(arrayData)
         });
       };
-
+     <form name="input" method="post" action="">
+        <input type="text" name="memberName" maxlength="10">
+        <input type="submit" value="전송">
+     </form>
       function drawChart(arrayData) {
         var data = new google.visualization.arrayToDataTable(arrayData);
 
         var options = {
           wordtree: {
             format: 'implicit',
-            word: 'Action'
+            word: 'Action',
+            type: 'double'
           }
         };
 
