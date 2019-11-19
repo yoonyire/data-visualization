@@ -11,6 +11,8 @@
     <input value = "Action" id = "root">
     <input type = "button" value ="go" id = "go">
     <i>(try: "Action", "RPG", "Simulation", "Indie", "Strategy")</i>
+    <div id="wordtree_basic" style="width: 1500px; height: 700px;"></div>
+    
     <script type="text/javascript">
       google.charts.load('current', {packages:['wordtree']});
       google.charts.setOnLoadCallback(readFile);
@@ -26,6 +28,8 @@
         });
       };
       function drawChart(arrayData) {
+        var chart = new google.visualization.WordTree(document.getElementById('wordtree_selector'));
+        
         var data = new google.visualization.arrayToDataTable(arrayData);
         
         var root = document.getElementById('root').value || '';
@@ -37,12 +41,10 @@
             type: 'double'
           }
         };
-
-        var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
+        
         chart.draw(data, options);
       }
       document.getElementById('go').onclick = drawChart;
     </script>
-    <div id="wordtree_basic" style="width: 1500px; height: 700px;"></div>
   </body>
 </html>
