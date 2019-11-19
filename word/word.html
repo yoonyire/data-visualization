@@ -13,6 +13,7 @@
     <i>(try: "Action", "RPG", "Simulation", "Indie", "Strategy")</i>
     <script type="text/javascript">
       google.charts.load('current', {packages:['wordtree']});
+      google.charts.setOnLoadCallback(readFile);
       google.charts.setOnLoadCallback(drawChart);
 
       function readFile() {
