@@ -1,5 +1,8 @@
 <html>
   <head>
+    <input value = "choice" id = "root">
+    <input type = "button" value ="go" id = "go">
+    <i>(try: "Action", "RPG", "Simulation", "Indie", "Strategy")</i>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,7 +27,7 @@
         var options = {
           wordtree: {
             format: 'implicit',
-            word: 'Action',
+            word: root,
             type: 'double'
           }
         };
@@ -35,10 +38,6 @@
     </script>
   </head>
   <body>
-    <form name="input" method="post" action="">
-        <input type="text" name="memberName" maxlength="10">
-        <input type="submit" value="전송">
-     </form>
     <div id="wordtree_basic" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
