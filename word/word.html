@@ -5,6 +5,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="jquery-csv.js"></script>
 
+    
+  </head>
+  <body>
+    <input value = "Action" id = "root">
+    <input type = "button" value ="go" id = "go">
+    <i>(try: "Action", "RPG", "Simulation", "Indie", "Strategy")</i>
     <script type="text/javascript">
       google.charts.load('current', {packages:['wordtree']});
       google.charts.setOnLoadCallback(readFile);
@@ -33,11 +39,6 @@
         chart.draw(data, options);
       }
     </script>
-  </head>
-  <body>
-    <input value = "Action" id = "root">
-    <input type = "button" value ="go" id = "go">
-    <i>(try: "Action", "RPG", "Simulation", "Indie", "Strategy")</i>
     <div id="wordtree_basic" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
